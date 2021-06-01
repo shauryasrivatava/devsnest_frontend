@@ -1,0 +1,8 @@
+.content{
+    display:flex;
+    justify-content: spacebetween;
+    
+}
+.second_column{
+    margin-right: 10px;
+}
