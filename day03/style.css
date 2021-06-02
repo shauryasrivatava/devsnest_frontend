@@ -1,8 +1,22 @@
+body{
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+h4{
+    text-align: center;
+}
 .content{
     display:flex;
-    justify-content: spacebetween;
+    /* justify-content: spacebetween; */
     
 }
+.first_column{
+    padding: left 10px;
+}
 .second_column{
-    margin-right: 10px;
+    margin-right : 10px;
+    align-content:right;
+
 }
