@@ -2,68 +2,62 @@ body{
     /* background-color: black; */
     height: 100vh;
     width: 100vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 .circle1{
-    height: 50vh;
-    width: 50vh;
+    height: 50%;
+    width: 50%;
     border-radius: 50%;
-    border: 80px solid violet;
-    transform: translate(50% - 50%);
-    position: fixed;
+    border: 0px solid rgb(223, 112, 223);
+    position: relative;
     left: 30%;
     top: 20%;
     box-shadow: 50px 10px 50px;
     
 }
 .min{
-    border: 3px solid black;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 50% 0% 0% 50%;
-    /* background-color: black; */
-    transform: translate(50% - 50%);
+    background-color: black;
     position: relative;
     top: 50%;
     width: 50%;
     transform-origin: bottom right;
-    animation: sec 150s linear infinite;
-    transform: rotate(137deg) 
+    animation: sec 600s linear infinite;
+    
 }
 .hour{
-    transform: translate(50% - 50%);
-    width: .1%;
-    height: 25%;
-    border: 2px solid black;
-    border-radius: 0% 500% 50% 500%;
-    /* background-color: black; */
+    width: 25%;
+    background-color: black;
+    border: 3px solid black;
+    border-radius: 50% 0% 0% 50%;
     position: relative;
-    left: 50% ;
-    top: 50%;
-    transform-origin: top ;
-    animation: sec 300s linear infinite;
-    /* transform: rotate(60deg)  */
+    top: 48%;
+    left:25%;
+    transform-origin: bottom right;
+    animation: sec calc(3600*24) linear infinite;
+    transform: rotate(84deg);
 }
 .second{
-    transform: translate(50% - 50%);
     border: 2px solid black;
-    /* background-color: black; */
-    border-radius: 0% 50% 50% 0%;
+    background-color: black;
+    border-radius: 50% 0% 0% 50%;
     position: relative;
-    left:50%;
-    top: 22%;
-    transform-origin: bottom left;
+    top: 47%;
+    transform-origin: bottom right;
     animation: sec 60s steps(60,end) infinite;
-    width: 48%;
-    /* transform: rotate(36deg) */
+    width: 50%;
 }
 .dot{
-    transform: translate(50% - 50%);
     border: 1px solid black;
     border-radius: 50%;
     background-color: black;
-    width: 5%;
-    height: 5%;
+    width: 4%;
+    height: 4%;
     position: relative;
-    left: 48%;
-    top: 19%;
+    top: 44%;
+    left: 50%;
 }
 @keyframes sec{
     from{ transform: rotate(0deg); }
