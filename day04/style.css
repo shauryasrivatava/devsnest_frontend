@@ -1,39 +1,71 @@
 body{
     /* background-color: black; */
+    height: 100vh;
+    width: 100vh;
 }
 .circle1{
     height: 50vh;
     width: 50vh;
-    border-radius: 500%;
+    border-radius: 50%;
     border: 80px solid violet;
+    transform: translate(50% - 50%);
     position: fixed;
-    left: 20%;
-    top: 10%;
+    left: 30%;
+    top: 20%;
+    box-shadow: 50px 10px 50px;
     
 }
-.line1{
+.min{
     border: 3px solid black;
-    background-color: black;
+    border-radius: 50% 0% 0% 50%;
+    /* background-color: black; */
+    transform: translate(50% - 50%);
     position: relative;
     top: 50%;
     width: 50%;
+    transform-origin: bottom right;
+    animation: sec 150s linear infinite;
+    transform: rotate(137deg) 
 }
-.line2{
+.hour{
+    transform: translate(50% - 50%);
     width: .1%;
     height: 25%;
-    border: 3px solid black;
-    background-color: black;
-    position: relative;
-    left: 50%;
-    top: 23%;
-}
-.line3{
     border: 2px solid black;
-    background-color: black;
+    border-radius: 0% 500% 50% 500%;
+    /* background-color: black; */
     position: relative;
-    left: 9%;
-    top: 3%;
-
-    width: 50%;
-    transform: rotate(50deg);
+    left: 50% ;
+    top: 50%;
+    transform-origin: top ;
+    animation: sec 300s linear infinite;
+    /* transform: rotate(60deg)  */
+}
+.second{
+    transform: translate(50% - 50%);
+    border: 2px solid black;
+    /* background-color: black; */
+    border-radius: 0% 50% 50% 0%;
+    position: relative;
+    left:50%;
+    top: 22%;
+    transform-origin: bottom left;
+    animation: sec 60s steps(60,end) infinite;
+    width: 48%;
+    /* transform: rotate(36deg) */
+}
+.dot{
+    transform: translate(50% - 50%);
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: black;
+    width: 5%;
+    height: 5%;
+    position: relative;
+    left: 48%;
+    top: 19%;
+}
+@keyframes sec{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg) }
 }
