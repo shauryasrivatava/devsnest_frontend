@@ -9,3 +9,8 @@ function solve(){
 function clr(){
     document.getElementById("result").value=""
 }
+function del(){
+    let x= document.getElementById("result").value;
+    y= x.substr(0,x.length -1);
+    document.getElementById("result").value=y;
+}
