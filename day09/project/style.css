@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    height: 100vh;
+}
+.movie_screen{
+    height: 10px;
+    width: 100;
+    background-color: brown;
+}
+.info{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.main_area{
+    
+    height: 85vh;
+    background-color: brown;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+.seats{
+    background-color: green;
+    /* height: 60px;
+    width: 60px; */
+    /* border: 1px solid black; */
+}
+
+.seats:hover {
+    background-color:grey;
+}
+.booked{
+    background-color: grey;
+}
