@@ -1,24 +1,25 @@
-let bookedSeatsElement= document.querySelector('.booking_seats');
-let remainingSeatsElement = document.querySelector('.remaining_seats');
-let seats= document.querySelectorAll('.seats');
 
-let bookSeats =0;
-let remainingSeats = seats.length;
+// let seats = 0
+// const rectangles = document.querySelectorAll(".seats");
+// Array.from(rectangles).forEach(element => {
+//     element.addEventListener("click", (x) => {
+//         let result = element.classList.toggle('active');
+//         if (result) seats++ 
+//         else seats--
+//         document.querySelector("booking_seats").innerHTML = "Booked Seats : " + seats;
+//         const remaining = document.querySelector("remaining_seats").innerHTML = 34 - seats;
+//     }); 
+// });
 
-bookedSeatsElement.innerText = bookedSeats;
-remainingSeatsElement.innerText = remainingSeats;
- seats.forEach((seat)=> {
-    seat.addEventListener('click',() => {
-        seat.classList.add('booked');
-        seat.classList.toggle("booked");
-        seat.classList.contains('booked')? bookedSeats(1) : unbookseats(-1);
-    });
- });
-
- const bookSeats = (s) => {
-    bookedSeats +=1*s;
-    remainingSeats -=1*s;
-
-    bookedSeatsElement.innerText = bookedSeats;
-    remainingSeatsElement.innerText = remainingSeats;
- }
+let set=document.querySelectorAll('.seats');
+let counts=0
+set.forEach(element => {
+    element.addEventListener('click',()=>{
+        let result = element.classList.toggle('booked');
+        if (result) counts++;
+        else counts--;
+        // console.log(counts);
+        book.innerHTML = counts;
+        remain.innerHTML =  36-counts;
+    })
+});
