@@ -1,0 +1,20 @@
+body{
+    padding-left: 250px;
+    padding-right: 250px;
+}
+.upper{
+    text-align: center;
+    font-size: 200%;
+}
+.lower{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.unhide{
+    color: white;
+}
+.child{
+    background-color: black;
+    font-size: 1000%;
+}
