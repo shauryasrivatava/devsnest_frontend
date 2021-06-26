@@ -1,4 +1,4 @@
-# devsnest-THA's
+# Devsnest-THA's
 
 ## LINKS
 -[all the frontend tha's can be seen here](https://shauryasrivatava.github.io/devsnest_frontend/)
