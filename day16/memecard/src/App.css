@@ -1,0 +1,21 @@
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.card{
+  margin: 25px;
+  width: 18rem;
+  height: 30rem;
+  /* border: 2px solid; */
+  box-shadow: 3px 3px 10px 1px black;
+}
+img{
+  margin:8px ;
+  height: 20rem;
+  width: 17rem;
+}
+.bottom{
+  text-align: center;
+}
