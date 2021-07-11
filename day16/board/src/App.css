@@ -5,6 +5,9 @@ body{
   display: flex;
   justify-content: center;
 }
+.board{
+  border: 5px solid;
+}
 .row{
   display: flex;
   flex-wrap: wrap;
@@ -13,10 +16,11 @@ body{
 .box{
   height: 60px;
   width: 60px;
-  border: 10px solid;
+  /* border: 5px solid; */
   /* margin: 10px; */
   /* background-color: black; */
 }
+
 .row:nth-child(even) .box:nth-of-type(even),
 .row:nth-child(odd) .box:nth-of-type(odd){
   background: black;
