@@ -1,23 +1,21 @@
-const Templates = ({ templates, setMeme }) => {
-    // console.log(templates);
+const Template = ({ templates, setMeme }) => {
   return (
-    <div className="Templates">
+    <div className="container">
       {templates.map((template) => (
         <div
           key={template.id}
           className="template"
-          onClick={() => setMeme(template)}
+          onClick={() => {
+            setMeme(template);
+          }}
         >
           <div
-            className="image"
             style={{ backgroundImage: `url(${template.url})` }}
+            className="image"
           ></div>
-          <p>{template.name}</p>
-          
         </div>
       ))}
     </div>
   );
 };
-
-export default Templates;
+export default Template;

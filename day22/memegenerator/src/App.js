@@ -1,73 +1,28 @@
-  import './App.css';
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import "./App.css";
+import { useState, useEffect } from "react";
+import Template from "./components/Template";
+import Meme from "./components/Meme";
 
-function App() {
-
-  const [memes, setMemes] = useState([]);
-
-  const getMemes = async () => {
-    try {
-      const data = await axios.get('https://meme-api.herokuapp.com/gimme/40')
-      const res = await data.data.memes
-      setMemes(res)
-      console.log(res)
-    } catch(err) {
-      console.log(err)
-    }
-  }
-
+const App = () => {
+  const [templates, setTemplates] = useState([]);
+  const [meme, setMeme] = useState(null);
   useEffect(() => {
-    getMemes()
-  }, [])
-
+    fetch("https://api.imgflip.com/get_memes")
+      .then((response) => response.json())
+      .then((data) => {
+        setTemplates(data.data.memes);
+        console.log(data.data.memes);
+      });
+  }, []);
   return (
-    <div className='container'>
-      <h1 className='heading'>Meme Generator</h1>
-      <div className='cards'>
-        {memes.map((meme, index) => (
-          <div className='card' key={ index }> 
-            <img src={ meme.preview[2] } alt={ meme.author }/>
-          </div>
-        ))}
-      </div>
+    <div className="App">
+      <h1 className="title">Meme Generator</h1>
+      {meme === null ?
+       <Template templates={templates} setMeme={setMeme} 
+      /> : 
+      <Meme meme={meme} />}
     </div>
   );
-}
+};
 
 export default App;
-// import { useState } from 'react';
-// import Templates from './components/Templates';
-// import Meme from './components/Meme';
-// import './App.css';
-
-// function App() {
-
-//   const [templates,setTemplates]=useState([]);
-//   const [meme,setMeme]=useState(null);
-
-//   useEffect(()=> {
-//     fetch("https://api.imgflip.com/get_memes")
-//     .then((res)=>res.json())
-//     .then((data)=>{
-//       setTemplates(data.data.memes);
-//     });
-//   }, []);
-
-//   return (
-//     <div className="App">
-//       <h1>Meme Gewner</h1>
-//       {meme===null ? (
-//         <Templates 
-//         templates={templates}
-//         setMeme={setMeme}/>
-//       ): (
-//         <Meme 
-//         meme={meme}
-//         setMeme={setMeme} />
-//       )}
-//     </div>
-//   );
-// }
-
-// export default App;
